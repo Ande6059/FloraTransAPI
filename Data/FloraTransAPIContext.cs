@@ -22,5 +22,16 @@ namespace FloraTransAPI.Data
 
         public DbSet<FloraTransAPI.Models.Warehouse> Warehouse { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Warehouse>().ToTable("Warehouse");
+            modelBuilder.Entity<Contact>().ToTable("Contact");
+            modelBuilder.Entity<Container>().ToTable("Container");
+            modelBuilder.Entity<Client>().ToTable("Client");
+            modelBuilder.Entity<ContainerAssignment>().ToTable("ContainerAssignment");
+
+            modelBuilder.Entity<ContainerAssignment>().HasKey(c => new { c.ContainerID, c.ClientID });
+        }
+
     }
 }

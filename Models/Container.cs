@@ -10,10 +10,10 @@ namespace FloraTransAPI.Models
     {
         [Key]
         public int CCTag { get; set; }
-        public DateTime RentTimeStamp { get; set; }
-        public DateTime ReturnTimeStamp { get; set; }
+        public DateTime? Rented { get; set; }
+        public DateTime? Returned { get; set; }
         public bool Available { get; set; }
         public bool Lost { get; set; }
-
+        public int CurrentClient { get; set; }
     }
 }
