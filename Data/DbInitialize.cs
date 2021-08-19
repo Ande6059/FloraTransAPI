@@ -59,22 +59,10 @@ namespace FloraTransAPI.Data
             new Client {CVR = 3, Address = "Odensestreet 6", Contact = contacts[2], RentedContainer = cvr3Rented},
             };
 
-            //var containerAssignment = new ContainerAssignment[]
-            //{
-            //    new ContainerAssignment {ContainerID = containers.Single(c => c.CCTag == 1).CCTag, ClientID = clients.Single(c => c.ID == 1).ID},
-            //    new ContainerAssignment {ContainerID = containers.Single(c => c.CCTag == 2).CCTag, ClientID = clients.Single(c => c.ID == 1).ID},
-            //    new ContainerAssignment {ContainerID = containers.Single(c => c.CCTag == 3).CCTag, ClientID = clients.Single(c => c.ID == 2).ID},
-            //    new ContainerAssignment {ContainerID = containers.Single(c => c.CCTag == 4).CCTag, ClientID = clients.Single(c => c.ID == 2).ID},
-            //    new ContainerAssignment {ContainerID = containers.Single(c => c.CCTag == 5).CCTag, ClientID = clients.Single(c => c.ID == 3).ID},
-            //    new ContainerAssignment {ContainerID = containers.Single(c => c.CCTag == 6).CCTag, ClientID = clients.Single(c => c.ID == 3).ID}
-              
-            //};
-
             context.AddRange(clients);
             context.AddRange(Warehouse);
             context.AddRange(containers);
             context.AddRange(contacts);
-           // context.AddRange(containerAssignment);
 
             context.SaveChanges();
         }

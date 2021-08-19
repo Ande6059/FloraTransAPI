@@ -28,9 +28,6 @@ namespace FloraTransAPI.Data
             modelBuilder.Entity<Contact>().ToTable("Contact");
             modelBuilder.Entity<Container>().ToTable("Container");
             modelBuilder.Entity<Client>().ToTable("Client");
-            modelBuilder.Entity<ContainerAssignment>().ToTable("ContainerAssignment");
-
-            modelBuilder.Entity<ContainerAssignment>().HasKey(c => new { c.ContainerID, c.ClientID });
         }
 
     }
